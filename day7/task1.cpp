@@ -63,7 +63,7 @@ int main(){
 
     int counter = 0;
 
-    rules.open("C:/Users/agfrxa/Python/advent of code 2020/day7/input.txt", std::ios::in);
+//    rules.open("C:/Users/agfrxa/Python/advent of code 2020/day7/input.txt", std::ios::in);
     rules.open("D:/Python/Advent-of-code-2020-python/day7/input.txt", std::ios::in);
     while (std::getline(rules, rule)){
         vec_rule = split(rule, delimeter);
