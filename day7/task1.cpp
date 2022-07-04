@@ -26,7 +26,7 @@ std::vector<std::string> map_builder (std::vector<std::string> &split_rule){
     std::string numbers = "0123456789";
     for (int i=0; i<split_rule.size(); i++) {
         if ( numbers.find((split_rule[i])) != std::string::npos ) {
-            result.push_back(split_rule[i+1] + "_" + split_rule[i+2]);
+            result.push_back(split_rule[i] + "_" + split_rule[i+1] + "_" + split_rule[i+2]);
         }
     }
     return result;
