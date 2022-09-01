@@ -26,7 +26,7 @@ std::vector<std::string> map_builder (std::vector<std::string> &split_rule){
     std::string numbers = "0123456789";
     for (int i=0; i<split_rule.size(); i++) {
         if ( numbers.find((split_rule[i])) != std::string::npos ) {
-            result.push_back(split_rule[i] + "_" + split_rule[i+1] + "_" + split_rule[i+2]);
+            result.push_back(split_rule[i+1] + "_" + split_rule[i+2]);
         }
     }
     return result;
@@ -62,9 +62,8 @@ int main(){
 
 
     int counter = 0;
-
-//    rules.open("C:/Users/agfrxa/Python/advent of code 2020/day7/input.txt", std::ios::in);
-    rules.open("D:/Python/Advent-of-code-2020-python/day7/input.txt", std::ios::in);
+    rules.open("C:/Users/agfrxa/Python/advent of code 2020/day7/input.txt", std::ios::in);
+//    rules.open("D:/Python/Advent-of-code-2020-python/day7/input.txt", std::ios::in);
     while (std::getline(rules, rule)){
         vec_rule = split(rule, delimeter);
         bag = vec_rule[0] + "_" + vec_rule[1];
